@@ -27,22 +27,22 @@
                                         <rect key="frame" x="0.0" y="270" width="382" height="219"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="rdG-Mv-HVN">
-                                                <rect key="frame" x="0.0" y="56" width="30.5" height="107.5"/>
+                                                <rect key="frame" x="0.0" y="56" width="26.5" height="107.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPW-q7-Sl8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWe-CH-h56">
-                                                        <rect key="frame" x="0.0" y="43.5" width="30.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="43.5" width="26.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DC-V1-iYb">
-                                                        <rect key="frame" x="0.0" y="87" width="30.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="87" width="26.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ug5-2p-8Cv">
-                                                <rect key="frame" x="45.5" y="56" width="31.5" height="107.5"/>
+                                                <rect key="frame" x="41.5" y="56" width="31.5" height="107.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.51" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-lk-OSg">
                                                         <rect key="frame" x="0.0" y="0.0" width="31.5" height="20.5"/>
@@ -73,18 +73,27 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISD-hM-xMq">
-                                                <rect key="frame" x="92" y="47.5" width="290" height="124"/>
+                                                <rect key="frame" x="88" y="47.5" width="294" height="124"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.51000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BfH-y5-aJO">
-                                                        <rect key="frame" x="-2" y="0.0" width="294" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="298" height="31"/>
                                                         <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                                        <connections>
+                                                            <action selector="redSliderChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="5xS-ej-FJA"/>
+                                                        </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.51000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="goX-xL-zTo">
-                                                        <rect key="frame" x="-2" y="47" width="294" height="31"/>
+                                                        <rect key="frame" x="-2" y="47" width="298" height="31"/>
                                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                        <connections>
+                                                            <action selector="greenSliderChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="9gU-Bo-iaD"/>
+                                                        </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.51000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jRj-HQ-im6">
-                                                        <rect key="frame" x="-2" y="93" width="294" height="31"/>
+                                                        <rect key="frame" x="-2" y="94" width="298" height="31"/>
+                                                        <connections>
+                                                            <action selector="blueSliderChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="Bo2-BI-Uvc"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
